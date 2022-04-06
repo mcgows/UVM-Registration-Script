@@ -52,7 +52,7 @@ select = Select(element)
 
 ### Select option meeting current reg request
 for o in select.options:
-    if o.text in config.TERMS:
+    if o.text is config.TERM:
         o.click()
 
 
