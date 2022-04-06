@@ -1,6 +1,7 @@
 # Setup #
 ### Selenium Driver ###
 * can be installed from terminal using `pip install selenium`
+* more instructions can be found here [ https://www.geeksforgeeks.org/how-to-install-selenium-webdriver-on-macos/ ]
 
 ### Safari > 10.0.0 ###
 * Need to enable safaridriver, on MacOS > 10.14.xx this can be done by entering the command `sudo safaridriver --enable` once in Terminal.
