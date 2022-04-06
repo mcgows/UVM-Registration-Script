@@ -1,4 +1,3 @@
-import myConfig
 import config
 
 import time
@@ -16,20 +15,20 @@ driver = webdriver.Safari()
 driver.maximize_window()
 
 ### Go to the desired Starting Address
-driver.get(myConfig.URL)
+driver.get(config.URL)
 
 
 ### Automate Login
 username_box = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.ID, "UserID"))
         )
-username_box.send_keys(myConfig.NETID)
+username_box.send_keys(config.NETID)
 
 
 password_box = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.ID, "PIN"))
         )
-password_box.send_keys(myConfig.NETID_PASSWORD + Keys.RETURN)
+password_box.send_keys(config.NETID_PASSWORD + Keys.RETURN)
 
 
 #### Select 'Registration'
@@ -53,7 +52,7 @@ select = Select(element)
 
 ### Select option meeting current reg request
 for o in select.options:
-    if o.text in myConfig.TERMS:
+    if o.text in config.TERMS:
         o.click()
 
 
@@ -70,9 +69,9 @@ crn_boxes = WebDriverWait(driver, 10).until(
 )
 
 ### Pass all CRNs to the Boxes
-for index, crn in enumerate(myConfig.CRNS):
+for index, crn in enumerate(config.CRNS):
     crn_boxes[index].send_keys(crn)
-    if index == len(myConfig.CRNS) - 1:
+    if (index == len(config.CRNS) - 1) and config.SUBMIT:
         crn_boxes[index].send_keys(Keys.RETURN)
 
 ### Quit the Webdriver after defined time in the config file
