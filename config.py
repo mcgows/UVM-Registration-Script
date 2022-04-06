@@ -7,4 +7,4 @@ CRNS = [] ### Array of CRNs
 
 TERMS = ["Fall 2022"] ### Term in the format "[Spring/Summer/Fall] [20xx]"
 
-QUIT_AFTER = 1 ## Change to how many seconds after submit to quit, if 0 it will not quit at all until user quits
+QUIT_AFTER = 30 ## Change to how many seconds after submit to quit, if 0 it will not quit at all until user quits
