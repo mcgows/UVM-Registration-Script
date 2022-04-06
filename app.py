@@ -44,7 +44,7 @@ select = Select(element)
 
 ### Select option meeting current reg request
 for o in select.options:
-    if o.text is config.TERM:
+    if o.text == config.TERM:
         o.click()
 
 ### Submit the term request
