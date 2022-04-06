@@ -8,4 +8,4 @@
 * Registration Term
 
 
-## Form will submit unless line 75 is commented out
+## Make sure to only run during YOUR open registration window
